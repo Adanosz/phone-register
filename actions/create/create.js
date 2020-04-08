@@ -1,4 +1,4 @@
-const knex = require('../../database/db');
+const knex = require('../../database/db').knex;
 const readLine = require('readline-sync');
 
 
@@ -22,7 +22,7 @@ const register = async () => {
     register();
   }
   for (let record of newPNRecords) {
-    await knex.knex('TelNumbs').insert(record)
+    await knex('TelNumbs').insert(record)
     console.log(first, last, phone_number, 'has been registered');
   }
   const newRegister = readLine.keyInYN('Do you want to register a new phone number? ');

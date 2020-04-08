@@ -1,4 +1,4 @@
-const knex = require('../../database/db');
+const knex = require('../../database/db').knex;
 const readLine = require('readline-sync');
 const table = require('table').table;
 
@@ -10,7 +10,7 @@ const search = async () => {
       'Last_name',
       'Phone_number' ]
   ];
-  const result = await knex.knex('TelNumbs').where({'TelNumbs.First_name': fNameToSearch, 'TelNumbs.Last_name': lNameToSearch});
+  const result = await knex('TelNumbs').where({'TelNumbs.First_name': fNameToSearch, 'TelNumbs.Last_name': lNameToSearch});
   for (let record of result) {
     output.push([
       record.First_name,

@@ -5,7 +5,7 @@ exports.up = function(knex) {
     table.increments();
     table.string('First_name', 35).notNullable();
     table.string('Last_name', 35).notNullable();
-    table.string('Phone_nnumber', 15).notNullable();
+    table.string('Phone_number', 15).notNullable();
   })
 };
 
