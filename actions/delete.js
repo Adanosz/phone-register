@@ -1,4 +1,4 @@
-const knex = require('../../database/db').knex;
+const knex = require('../database/db').knex;
 const readLine = require('readline-sync');
 
 const delPhoneNumb = async () => {

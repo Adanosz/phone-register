@@ -1,10 +1,9 @@
-const read = require('../actions/read/read');
-const search = require('../actions/search/search');
-const create = require('../actions/create/create');
-const update = require('../actions/update/update')
-const del = require('../actions/delete/delete')
+const read = require('../actions/read');
+const search = require('../actions/search');
+const create = require('../actions/create');
+const update = require('../actions/update')
+const del = require('../actions/delete')
 
-// const fs = require('fs');
 const readLine = require('readline-sync');
 const stdin = process.stdin;
 stdin.setRawMode(true);

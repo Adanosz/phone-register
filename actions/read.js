@@ -1,4 +1,4 @@
-const knex = require('../../database/db').knex;
+const knex = require('../database/db').knex;
 const table = require('table').table;
 
 const showTable = async () => {
